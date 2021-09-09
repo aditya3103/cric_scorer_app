@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BatFirstTeam"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".scoring">
+
+    <TextView
+        android:id="@+id/FieldingTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="batting Team "
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/BatFirstScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BatFirstScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Score: 0/0"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FieldingTeam" />
+
+    <TextView
+        android:id="@+id/BatFirstOvers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginRight="333dp"
+        android:layout_marginBottom="605dp"
+        android:text="Overs: 0."
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BatFirstScore"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/BatFirstBalls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/BatFirstOvers"
+        app:layout_constraintTop_toBottomOf="@id/BatFirstScore" />
+
+    <LinearLayout
+        android:id="@+id/Linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:translationY="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers">
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:onClick="scorer"
+            android:tag="0"
+            android:text="Dot"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:backgroundTint="@color/purple_700"
+            app:cornerRadius="90dp"
+            app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:onClick="scorer"
+            android:tag="1"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:backgroundTint="@color/purple_700"
+            app:cornerRadius="90dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="scorer"
+            android:tag="2"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:backgroundTint="@color/purple_700"
+            app:cornerRadius="90dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:translationY="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Linear1">
+
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:onClick="scorer"
+            android:tag="3"
+
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:backgroundTint="@color/purple_700"
+            app:cornerRadius="90dp"
+            app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:onClick="scorer"
+
+            android:tag="4"
+            android:text="4"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:backgroundTint="#03DAC5"
+            app:cornerRadius="90dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="scorer"
+            android:tag="6"
+
+            android:text="6"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:backgroundTint="#03DAC5"
+            app:cornerRadius="90dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:translationY="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Linear2">
+
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:onClick="scorer"
+            android:tag="7"
+
+            android:text="OUT"
+
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:backgroundTint="#CF6679"
+            app:cornerRadius="90dp"
+            app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:onClick="scorer"
+            android:tag="8"
+
+            android:text="WIDE"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:backgroundTint="#CF6679"
+            app:cornerRadius="90dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="scorer"
+            android:tag="9"
+
+            android:text="NO\nBALL"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:translationY="-10dp"
+            app:backgroundTint="#CF6679"
+            app:cornerRadius="90dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timeLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:text="Timeline"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BatFirstOvers" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="230dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="19dp"
+        android:onClick="nextInnings"
+        android:text="Start \nnext Innings"
+        app:cornerRadius="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear3" />
+
+    <TextView
+        android:id="@+id/equation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:scrollHorizontally="true"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/BatFirstBalls"
+        app:layout_constraintTop_toBottomOf="@id/BatFirstScore" />
+
+    <TextView
+        android:id="@+id/timeline"
+        android:layout_width="361dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:fadeScrollbars="true"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbars="horizontal"
+        android:scrollHorizontally="true"
+        android:text="DNS"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeLine" />
+
+    <Button
+        android:id="@+id/undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="undo"
+        android:text="UNDO"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="#B00020"
+        app:cornerRadius="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear3" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Time Left: "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
